@@ -11,4 +11,4 @@ phases:
 artifacts:
   files:
     - '**/*'
-  base-directory: 'pagina' # Esto hace que solo el contenido de /pagina llegue al Bucket
+  base-directory: '.'
