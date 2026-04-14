@@ -1,15 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos DevOps</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="card">
         <img src="https://www.tecmilenio.mx/sites/default/files/styles/large/public/2023-11/Group%20%287%29_0.png?itok=WdJuKOh4" alt="Logo Tecmilenio" class="logo">
-        
-        <h1>Uriel Ramirez Galvez</h1>
+        <h1>Uriel Ramírez Gálvez</h1>
         <p class="email">al07017780@tecmilenio.mx</p>
+        
+        <button id="abrirModal" class="btn-futurista">Ver Matrícula</button>
     </div>
+
+    <div id="miModal" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar">&times;</span>
+            <img src="https://i.pinimg.com/736x/d5/5b/86/d55b869204d744ec855a166b40c96a50.jpg" alt="Mi Foto" class="foto-perfil">
+            <h2>Matrícula: al07017780</h2>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById("miModal");
+        const btn = document.getElementById("abrirModal");
+        const span = document.getElementsByClassName("cerrar")[0];
+
+        btn.onclick = function() {
+            modal.style.display = "flex";
+        }
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
